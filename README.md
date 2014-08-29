@@ -26,6 +26,7 @@ Steps:
 2. Strips any leading and trailing whitespace
 3. Converts any substring of non-ASCII alphanumeric characters to an underscore
 4. Removes any leading and trailing underscores
+5. Prefixes the string with "_" if it starts with a digit (which can otherwise cause trouble with `pandas` and other libraries). E.g., "2013 Happiness" becomes "_2013_happiness".
 
 Example:
 

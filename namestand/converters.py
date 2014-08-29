@@ -4,7 +4,8 @@ downscore = u.combine([
     u.lowercase,
     u.strip,
     u.underscore,
-    u.stripper("_")
+    u.stripper("_"),
+    u.init_num_prefixer("_")
 ])
 
 person_basic = u.combine([

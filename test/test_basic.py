@@ -32,6 +32,12 @@ def test_downscore():
    assert(c[2] == "geography")
    assert(c[3] == "estimate_employment_status_population_16_years_and_over")
 
+def test_num_prefixer():
+    d = namestand.downscore
+    assert(d("2013 Happiness") == "_2013_happiness")
+    assert(d("The 2013 Happiness") == "the_2013_happiness")
+    assert(namestand.init_num_prefixer("n")("2013") == "n2013")
+
 def test_translator():
     converter = namestand.combine([
         namestand.downscore,

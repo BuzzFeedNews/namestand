@@ -42,8 +42,12 @@ def defaulter(test, default_value):
 def falsey_replacer(default_value):
     return defaulter(lambda x: x, default_value)
 
+def init_num_prefixer(prefix_char):
+    return translator(p.starts_with_num, r"{0}\1".format(prefix_char))
+
 underscore = translator(p.non_alphanumeric, "_")
 
 clean_person = translator(p.non_namey, "")
 
 flip_last_first = translator(p.last_first, r"\2 \1")
+

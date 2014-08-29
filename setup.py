@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="namestand",
-    version="0.0.0",
-    description="Standardize any lists of strings, but especially database/CSV column-names.",
+    version="0.0.1",
+    description="Standardize any list of strings, but especially database/CSV column-names.",
     long_description="",
     classifiers=[
         "Development Status :: 3 - Alpha",
