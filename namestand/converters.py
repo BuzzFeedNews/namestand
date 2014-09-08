@@ -12,5 +12,14 @@ person_basic = u.combine([
     u.uppercase,
     u.strip,
     u.flip_last_first,
-    u.clean_person
+    u.clean_person,
+    u.compress_whitespace
+])
+
+company_basic = u.combine([
+    u.uppercase,
+    u.clean_person,
+    u.remove_company_cruft,
+    u.strip,
+    u.compress_whitespace
 ])

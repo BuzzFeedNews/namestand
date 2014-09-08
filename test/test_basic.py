@@ -68,6 +68,10 @@ def test_flip_proper():
     assert(fp(u"Mark M. Antoñy") == u"MARK M ANTOÑY")
     assert(fp(u"Diego Velázquez-O'Connor") == u"DIEGO VELÁZQUEZ-O'CONNOR")
 
+def test_company():
+    c = namestand.company_basic
+    assert(c("American Banana Stand, Inc.") == "AMERICAN BANANA STAND")
+
 def test_list_defaulter():
     choices = [ "foo", "bar" ]
     x = namestand.combine([

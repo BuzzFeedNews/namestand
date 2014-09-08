@@ -49,5 +49,9 @@ underscore = translator(p.non_alphanumeric, "_")
 
 clean_person = translator(p.non_namey, "")
 
+remove_company_cruft = translator(p.company_cruft, "")
+
 flip_last_first = translator(p.last_first, r"\2 \1")
+
+compress_whitespace = translator(p.whitespace, r" ")
 

@@ -44,7 +44,7 @@ namestand.downscore([
 ]
 ```
 
-### namestand.person_basic(string_or_list_of_strings)
+### namestand.person_basic(string_or_list_of_strings) [very alpha]
 
 Suggested usage: Donor names, etc.; note, though, that this converter does not have any special knowledge of the world, e.g., that "Riccchard" is likely a misspelling of "Richard".
 
@@ -66,6 +66,22 @@ namestand.person_basic([
     u"DIEGO VELÁZQUEZ-O'CONNOR",
     "MARK ANTONY"
 ]
+```
+### namestand.company_basic(string_or_list_of_strings) [very alpha]
+
+Tries to remove common cruft from company names.
+
+Steps:
+
+1. Uppercases the string
+2. Strips any leading and trailing whitespace
+3. Removes the following characters that aren't either (unicode) letters, `'`, `-`, or spaces.
+4. Removes "LLC", "LTD", and "INC"
+
+Example:
+
+```python
+namestand.person_basic("American Banana Stand, Inc.") == "AMERICAN BANANA STAND"
 ```
 
 ## Custom Converters
