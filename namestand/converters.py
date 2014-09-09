@@ -11,8 +11,10 @@ downscore = u.combine([
 person_basic = u.combine([
     u.uppercase,
     u.strip,
+    u.clean_comma_suffix,
     u.flip_last_first,
     u.remove_non_namey,
+    u.remove_name_cruft,
     u.compress_whitespace
 ])
 

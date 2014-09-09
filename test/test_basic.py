@@ -68,6 +68,14 @@ def test_flip_proper():
     assert(fp(u"Mark M. Antoñy") == u"MARK M ANTOÑY")
     assert(fp(u"Diego Velázquez-O'Connor") == u"DIEGO VELÁZQUEZ-O'CONNOR")
 
+def test_complex_names():
+    c = namestand.person_basic
+    assert(c("Nolpmet, John Esq.") == "JOHN NOLPMET")
+    assert(c("Nolpmet, John Mr.") == "JOHN NOLPMET")
+    assert(c("Nolpmet, John M. Mr.") == "JOHN M NOLPMET")
+    assert(c("John Nolpmet, Jr.") == "JOHN NOLPMET JR")
+    assert(c("John Nolpmet, VIII") == "JOHN NOLPMET VIII")
+
 def test_company():
     c = namestand.company_basic
     assert(c("American Banana Stand, Inc.") == "AMERICAN BANANA STAND")

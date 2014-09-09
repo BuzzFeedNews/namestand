@@ -55,6 +55,8 @@ Steps:
 3. Flips the "first" and "last" names if a comma is present
 4. Removes the following characters that aren't either (unicode) letters, `'`, `-`, or spaces.
 
+Along the way, it tries to gracefully handle name prefixes (Mr./Mrs./etc.) and suffixes (Jr./Sr./VII/Esq./etc.).
+
 Example:
 
 ```python
