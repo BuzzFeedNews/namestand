@@ -47,7 +47,7 @@ def init_num_prefixer(prefix_char):
 
 underscore = translator(p.non_alphanumeric, "_")
 
-clean_person = translator(p.non_namey, "")
+remove_non_namey = translator(p.non_namey, "")
 
 remove_company_cruft = translator(p.company_cruft, "")
 
