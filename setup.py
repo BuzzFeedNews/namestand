@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="namestand",
-    version="0.0.2",
+    version="0.0.3",
     description="Standardize any list of strings, but especially database/CSV column-names.",
     long_description="",
     classifiers=[
