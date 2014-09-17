@@ -15,6 +15,7 @@ person_basic = u.combine([
     u.flip_last_first,
     u.remove_non_namey,
     u.remove_name_cruft,
+    u.strip,
     u.compress_whitespace
 ])
 

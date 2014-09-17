@@ -47,15 +47,15 @@ def init_num_prefixer(prefix_char):
 
 underscore = translator(p.non_alphanumeric, "_")
 
-remove_non_namey = translator(p.non_namey, "")
+remove_non_namey = translator(p.non_namey, " ")
 
 clean_comma_suffix = translator(p.comma_suffix, r" \1")
 
-remove_name_cruft = translator(p.name_cruft, "")
+remove_name_cruft = translator(p.name_cruft, " ")
 
-remove_company_cruft = translator(p.company_cruft, "")
+remove_company_cruft = translator(p.company_cruft, " ")
 
 flip_last_first = translator(p.last_first, r"\2 \1")
 
-compress_whitespace = translator(p.whitespace, r" ")
+compress_whitespace = translator(p.whitespace, " ")
 
