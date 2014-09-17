@@ -12,6 +12,6 @@ starts_with_num = re.compile(r"^(\d)")
 
 name_cruft = re.compile(r"\b(MR|MS|MRS|ESQ|SIR|HON)\b")
 
-company_cruft = re.compile(r"\b(LLC|LTD|INC)\b")
+company_cruft = re.compile(r"\b(LLC|LTD|INC|LLP)\b")
 
 whitespace = re.compile(r"\s+")
