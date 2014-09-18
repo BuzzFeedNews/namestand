@@ -112,7 +112,9 @@ downhyphen = namestand.combine([
 
 Some helpful transformers:
 
-- __`namestand.translator(string_or_regex, replacement)`__: Equivalent to an argument-aware combination of `lambda x: x.replace(string, replacement)` and `lambda x: re.sub(regex, replacement)`.
+- __`namestand.translator(pattern, replacement)`__: `pattern` can be a string or a compiled regex. Equivalent to an argument-aware combination of `lambda x: x.replace(string, replacement)` and `lambda x: re.sub(regex, replacement)`.
+
+- __`namestand.swapper(pattern, replacement)`__: `pattern` can be a string or a compiled regex. If a given name matches the pattern (`re.match` for compiled regexes, `x in pattern` for string-`pattern`s), the entire name is replaced with the replacement. Otherwise, the given name is retained.
 
 - __`namestand.stripper(chars_to_strip)`__: Equivalent to `lambda x: x.strip(chars_to_strip)`
 

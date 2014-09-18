@@ -95,3 +95,12 @@ def test_fn_defaulter():
     orig = [ None, False, "hi", "there" ]
     assert(x(orig) == [ "NOPE", "NOPE", "hi", "there" ])
 
+def test_swapper():
+    x = namestand.swapper("BUZZFEED", "BuzzFeed")
+    y = namestand.swapper(re.compile("BUZZFEED", re.I), "BuzzFeed")
+    assert(x("BUZZFEED INC") == "BuzzFeed")
+    assert(x("THE BUZZFEED") == "BuzzFeed")
+    assert(x("BuzzFeed Inc.") == "BuzzFeed Inc.")
+    assert(y("BUZZFEED INC") == "BuzzFeed")
+    assert(y("BuzzFeed Inc.") == "BuzzFeed")
+    assert(y("The BuzzFeed Inc.") == "BuzzFeed")

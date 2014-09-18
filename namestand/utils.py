@@ -23,12 +23,20 @@ def stripper(chars):
 
 strip = stripper(None)
 
-# Note: `pattern` can be a string or a compiled regular expression
+# `pattern` can be a string or a compiled regular expression
 def translator(pattern, replacement):
     def fn(x):
         if isinstance(pattern, re._pattern_type):
             return re.sub(pattern, replacement, x)
         return x.replace(pattern, replacement)
+    return fn
+
+# `pattern` can be a string or a compiled regular expression
+def swapper(pattern, replacement):
+    def fn(x):
+        if isinstance(pattern, re._pattern_type):
+            return replacement if re.search(pattern, x) else x
+        return replacement if pattern in x else x
     return fn
 
 # `test` can be a function or a list/tuple
