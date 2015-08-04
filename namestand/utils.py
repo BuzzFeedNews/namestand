@@ -1,12 +1,23 @@
 import namestand.patterns as p
+from functools import reduce
 import re
+
+try: basestring
+except NameError:
+    basestring = str
+
+def is_seq(x):
+    if hasattr(x, "__iter__") and not isinstance(x, basestring):
+        return True
+    else: return False
 
 def combine(converters):
     def applicator(x):
-        return reduce(lambda m, conv: conv(m), converters, x)
+        reduced = reduce(lambda m, conv: conv(m), converters, x)
+        return reduced
     def fn(x):
-        if hasattr(x, "__iter__"):
-            return map(fn, x)
+        if is_seq(x):
+            return list(map(fn, x))
         return applicator(x)
     return fn
 

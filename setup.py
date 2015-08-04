@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="namestand",
-    version="0.0.4",
+    version="0.1.0",
     description="Standardize any list of strings, but especially database/CSV column-names.",
     long_description="",
     classifiers=[
@@ -13,7 +13,8 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3.3"
+        "Programming Language :: Python :: 3.1",
+        "Programming Language :: Python :: 3.4"
     ],
     keywords="rename columns standardize standardizing names",
     author="Jeremy Singer-Vine",

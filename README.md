@@ -122,7 +122,7 @@ Some helpful transformers:
 
 ## Tests
 
-Additional usage examples can be found in [test/](test/). To test, run `nosetests` from this repo's root directory.
+Additional usage examples can be found in [test/](test/). To test, run `nosetests` or `tox` from this repo's root directory. Currently tested, and passing, on Python 2.6, 2.7, 3.1, and 3.4.
 
 ## Feedback?
 
