@@ -6,6 +6,10 @@ try: basestring
 except NameError:
     basestring = str
 
+try: re._pattern_type
+except AttributeError:
+    re._pattern_type = re.Pattern
+
 def is_seq(x):
     if hasattr(x, "__iter__") and not isinstance(x, basestring):
         return True

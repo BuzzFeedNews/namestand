@@ -122,7 +122,15 @@ Some helpful transformers:
 
 ## Tests
 
-Additional usage examples can be found in [test/](test/). To test, run `nosetests` or `tox` from this repo's root directory. Currently tested, and passing, on Python 2.6, 2.7, 3.1, and 3.4.
+Additional usage examples can be found in [test/](test/). To test, run `nosetests` or `tox` from this repo's root directory. Currently tested, and passing, on the following Python versions:
+
+```
+2.7.14
+3.5.4
+3.6.4
+3.7.5
+3.8.0
+```
 
 ## Feedback?
 
